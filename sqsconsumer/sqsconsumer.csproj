@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-sqsconsumer-E0931946-0342-457B-88E3-CFAA59F09F14</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EntityDeploy Include="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.1.60" />
+      <PackageReference Include="EntityFramework" Version="6.4.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+      <PackageReference Include="AWSSDK.SQS" Version="3.7.2.4" />
+      <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.1" />
+      <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="6.15.0" />
+      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.3" />
+	  <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+	  <PackageReference Include="MySql.Data" Version="8.0.27" />
+	  <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.1.71" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Properties\appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
